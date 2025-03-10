@@ -1,0 +1,313 @@
+/* src/Home.css */
+.homepage {
+  background-image: url('homestarbg.jpg');
+  height: 100vh;
+}
+
+/* Navbar Styles */
+
+
+/* Slideshow Styles */
+.slideshow {
+
+  position: relative;
+  height: 300px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-top: 10%;
+}
+
+.slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  min-width: 100%;
+  color: white;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide h2,
+.slide h1 {
+  margin: 10px 0;
+  color: white;
+}
+
+.slide p {
+  margin-top: 1.5%;
+  font-size: large;
+}
+
+/* Carousel Controls */
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+button {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+button:focus {
+  outline: none;
+}
+
+.hm2 {
+  margin-top: 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+
+}
+
+.hm3 p {
+  background-image: url('arrow-end.png');
+  /* background-size: cover; */
+  background-position: bottom;
+  background-repeat: repeat-x;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0% 10%;
+}
+
+.circlebox :hover {
+  background-color: rgb(243, 220, 10);
+
+}
+
+.circle-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  background-image: url('arrow-end.png');
+}
+
+.circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #2b2929;
+  border: 2px solid #ccc;
+  /* padding: 15%; */
+}
+
+.circle-image {
+  width: 50%;
+  height: 50%;
+  
+  /* object-fit: cover; */
+}
+
+.circle-text {
+  text-align: center;
+}
+
+
+.hm4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wl {
+  flex: 1;
+
+}
+
+.wr {
+  flex: 1;
+}
+
+.rm {
+  border-radius: 30px 30px 0px 30px;
+  padding: 2% 10%;
+}
+
+.hm5 {
+  padding: 0% 10%;
+
+}
+
+.wwa {
+  padding: 0% 10%;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px;
+  gap: 2px;
+}
+
+.card {
+  width: 300px;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: #f9f9f9;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.circlewcs {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.circle-imagewcs {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.card-content {
+  font-size: 1rem;
+  color: #666;
+}
+
+.hm9 {
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  margin: 5% 0%;
+  padding: 5% 0%;
+
+}
+
+/* General styles for mobile responsiveness */
+@media (max-width: 768px) {
+  /* Navbar adjustments */
+  .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+  }
+
+  .nav-links.open {
+      display: flex;
+  }
+
+  .hamburger {
+      display: block;
+      cursor: pointer;
+  }
+
+  /* Slideshow adjustments */
+  .slideshow {
+      text-align: center;
+      padding: 10px;
+  }
+
+  .slide h2,
+  .slide h1,
+  .slide p {
+      font-size: 1rem;
+  }
+
+  .carousel-controls button {
+      padding: 8px;
+      font-size: 0.9rem;
+  }
+
+  /* Circle container for 'WHAT WE DO' section */
+  .circle-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .circlebox {
+      margin-bottom: 15px;
+  }
+
+  /* WHO WE ARE section */
+  .hm4 {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+
+  .cards-container{
+    flex-direction: column;
+  }
+
+  .wl img {
+      width: 80%;
+  }
+
+  /* Contact form adjustments */
+  .contactpage .ff,
+  .contactpage .fg {
+      width: 100%;
+      margin-bottom: 10px;
+  }
+
+  .contactpage button {
+      width: 100%;
+  }
+  .cbg{
+    width: auto;
+  }
+
+  /* Footer adjustments */
+  .abtftr {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .abtftr > div {
+      margin-bottom: 20px;
+  }
+}
